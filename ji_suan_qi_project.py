@@ -15,8 +15,8 @@ second_number = input("请输入第二个数字:")
 
 
 
-#根据有没有"." 判断用户输入数字类型，并进行字符串到数字类型转换
-if "." in first_number:
+#判断用户输入数字类型，并进行字符串到数字类型转换
+if "." in first_number :
     first_number = float(first_number)
 else:
     first_number = int(first_number)
@@ -26,7 +26,7 @@ if "." in second_number:
 else:
     second_number = int(second_number)
 
-#条件控制部分 根据用户输入的符号执行相应的计算及结果输出，同时对result进行数字到字符串的转换，
+#条件控制部分 根据用户输入的符号执行相应的计算及结果输出，同试对result进行转换，
 # 将整数类型的result转换为字符串类型然后赋值给要输出的result
 #运行过程，利用 if条件语句，“==”，判断用户输入的运算符和下列哪一组运算过程的执行条件相符，执行相应的一组代码，
 #然后输出结果
@@ -54,53 +54,59 @@ elif operation == "/":
 elif operation == "%":
     result = first_number % second_number
     result = str(result)
-    print("取模运算结果="+result)
+    print("第一个数字除以第二个数字，取模运算结果="+result)
 
 elif operation == "**":
     result = first_number ** second_number
     result = str(result)
-    print("幂运算结果="+result)
+    print("第一个数字的‘第二个数字’次方，幂运算结果="+result)
 
 elif operation == "//":
     result = first_number // second_number
     result = str(result)
-    print("取整除运算结果="+result)
+    print("第一个数字除以第二个数字，取整除运算结果="+result)
 
 elif operation == "+=":
-    first_number += second_number
-    result = str(first_number)
-    print("加等于运算结果="+result)
+    result = first_number
+    result += second_number
+    result = str(result)
+    print("第一个数字加等于第二个数字，运算结果="+result)
 
 elif operation == "-=":
-    first_number -= second_number
-    result = str(first_number)
-    print("减等于运算结果="+result)
+    result = first_number
+    result -= second_number
+    result = str(result)
+    print("第一个数字减等于第二个数字，运算结果="+result)
 
 elif operation == "*=":
-    first_number *= second_number
-    result = str(first_number)
-    print("乘等于运算结果="+result)
+    result = first_number
+    result *= second_number
+    result = str(result)
+    print("第一个数字乘等于第二个数字，运算结果="+result)
 
 elif operation == "/=":
-    first_number /= second_number
-    result = str(first_number)
-    print("第一个数字取 除等于运算结果="+result)
+    result = first_number
+    result /= second_number
+    result = str(result)
+    print("第一个数字除等于第二个数字，运算结果="+result)
 
 elif operation == "%=":
-    first_number %= second_number
-    result = str(first_number)
-    print("第一个数字取 模等于运算结果="+result)
+    result = first_number
+    result %= second_number
+    result = str(result)
+    print("第一个数字模等于第二个数字，运算结果="+result)
 
 elif operation == "**=":
-    first_number **= second_number
-    result = str(first_number)
-    print("第一个数字取 幂等于运算结果="+result)
+    result = first_number
+    result **= second_number
+    result = str(result)
+    print("第一个数字幂等于第二个数字，运算结果="+result)
 
 elif operation == "//=":
-    first_number //= second_number
-    result = str(first_number)
-    print("第一个数字取 整除等于运算结果="+result)
-
+    result = first_number
+    result //= second_number
+    result = str(result)
+    print("第一个数字整除等于第二个数字，运算结果="+result)
 
 
 
